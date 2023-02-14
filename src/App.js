@@ -20,8 +20,8 @@ const App = () => {
 
 
     return (
-        <div>
-        <h1>Hello World</h1>
+        <div className="app">
+            <h1>MovieLand</h1>
         </div>
     );
 }
