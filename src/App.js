@@ -43,25 +43,17 @@ const App = () => {
                     onClick={() => {}}
                 />
             </div>
-        {
-            movies.length > 0
-            ? (
-                <div className="container">
-                <MovieCard movie={movies[0]} />
-                </div>
-            )
-            : (
-                <div className="empty">
-                    <h2>No movies found</h2>
-                </div>
-            )
+        {movies.length > 0 ? 
+            (<div className="container">
+                {movies.map(movie => (<MovieCard movie={movie} />))}
+            </div>) 
+            : 
+            (<div className="empty">
+                <h2>No movies found</h2>
+            </div>)
         }
-        
-
-            
-
         </div>
-    );
+    )
 }
 
 export default App
