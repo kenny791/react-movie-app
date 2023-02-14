@@ -43,9 +43,22 @@ const App = () => {
                     onClick={() => {}}
                 />
             </div>
-            <div className="container">
+        {
+            movies.length > 0
+            ? (
+                <div className="container">
                 <MovieCard movie={movies[0]} />
-            </div>
+                </div>
+            )
+            : (
+                <div className="empty">
+                    <h2>No movies found</h2>
+                </div>
+            )
+        }
+        
+
+            
 
         </div>
     );
